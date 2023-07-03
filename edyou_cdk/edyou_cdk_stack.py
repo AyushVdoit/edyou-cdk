@@ -10,7 +10,7 @@ class EdyouCdkStack(cdk.Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        pipeline =  CodePipeline(self, "Pipeline",
+        pipeline =  CodePipeline(self, "Pipeline_edyou",
                         pipeline_name="edyouPipeline",
                         synth=ShellStep("Synth",
                             input=CodePipelineSource.git_hub("AyushVdoit/edyou-cdk", "main"),
